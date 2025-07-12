@@ -2,13 +2,9 @@
 
 import { ThemeProvider } from "./theme-provider";
 import { Toaster } from "./ui/sonner";
+import { CartProvider } from "@/contexts/CartContext";
 
-
-export default function Providers({
-  children
-}: {
-  children: React.ReactNode
-}) {
+export default function Providers({ children }: { children: React.ReactNode }) {
   return (
     <ThemeProvider
       attribute="class"
@@ -16,8 +12,10 @@ export default function Providers({
       enableSystem
       disableTransitionOnChange
     >
-      {children}
-      <Toaster richColors />
+      <CartProvider>
+        {children}
+        <Toaster richColors />
+      </CartProvider>
     </ThemeProvider>
   );
 }

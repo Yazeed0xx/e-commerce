@@ -17,8 +17,12 @@
     "db:generate": "turbo -F server db:generate",
     "db:migrate": "turbo -F server db:migrate"
   },
-  "dependencies": {},
+  "dependencies": {
+    "jsonwebtoken": "^9.0.2",
+    "zustand": "^5.0.6"
+  },
   "devDependencies": {
+    "@types/jsonwebtoken": "^9.0.10",
     "turbo": "^2.5.4"
   },
   "packageManager": "npm@10.9.2"
